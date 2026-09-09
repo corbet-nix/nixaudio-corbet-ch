@@ -1,13 +1,10 @@
 name: ci
 
+# Crow runs portable validation; this workflow is the manual fallback.
 on:
-  push:
-    branches: [ main ]
-  pull_request:
   workflow_dispatch:
 
-# A push to a branch with an open pull request fires both triggers. Without this the second run
-# spends its minutes re-proving exactly what the first one is proving.
+# Coalesce repeated manual requests for the same ref.
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
