@@ -244,6 +244,15 @@ The nixaudio Rust code is `MIT OR Apache-2.0` (see `LICENSE-MIT` and `LICENSE-AP
 terms; its own `--version` output identifies the build as LGPL and points to upstream `LICENSE.md`
 for the MIT/GPL portions.
 
+## Mechanism source
+
+The Rust mechanism (daemon, tray, CLI, harness) lives in
+[`corbet-libs/caudio`](https://github.com/corbet-libs/caudio) (FSL-1.1-ALv2)
+and is consumed here as the `caudio` flake input. This repository owns the
+NixOS, system-manager, and Home Manager planes, the JackTrip packaging, and
+the checks that bind them to the built package. Binary and option names are
+unchanged.
+
 ## Licence
 
-Outbound licence is `MIT OR Apache-2.0`. See `LICENSE-MIT` and `LICENSE-APACHE`; every source file carries `SPDX-License-Identifier: MIT OR Apache-2.0`, and `Cargo.toml` declares `license = "MIT OR Apache-2.0"`.
+Outbound licence of the Nix code in this repository is `MIT OR Apache-2.0`. See `LICENSE-MIT` and `LICENSE-APACHE`; every source file carries `SPDX-License-Identifier: MIT OR Apache-2.0`. The Rust sources consumed via the `caudio` input carry their own FSL-1.1-ALv2 licence from that repository.

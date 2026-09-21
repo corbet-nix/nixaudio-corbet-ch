@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: MIT OR Apache-2.0
-{ pkgs, nixpkgs, nixaudioPackage, nixaudioModule, archModule, homeModule }:
+{ pkgs, nixpkgs, nixaudioPackage, nixaudioModule, archModule, homeModule, caudioSrc }:
 let
   lib = nixpkgs.lib;
   nixosRoles = import ../lib/nixos-roles.nix { inherit lib pkgs; };
-  cargoManifest = builtins.fromTOML (builtins.readFile ../Cargo.toml);
+  cargoManifest = builtins.fromTOML (builtins.readFile "${caudioSrc}/Cargo.toml");
 
   nixusbStub = { lib, ... }: {
     options.nixusb.devices = lib.mkOption {
@@ -165,7 +165,8 @@ in
   # after silently dropping the daemon or tray while the library tests still pass.
   rust-package-outputs =
     assert nixaudioPackage.meta.mainProgram == "nixaudioctl";
-    assert nixaudioPackage.meta.license.spdxId == "MIT";
+    assert builtins.elem pkgs.lib.licenses.mit nixaudioPackage.meta.license;
+    assert builtins.elem pkgs.lib.licenses.asl20 nixaudioPackage.meta.license;
     assert cargoManifest.profile.release.lto == "thin";
     assert cargoManifest.profile.release.strip;
     assert nixaudioPackage ? cargoArtifacts;

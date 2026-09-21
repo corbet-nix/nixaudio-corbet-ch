@@ -1,16 +1,17 @@
 # SPDX-License-Identifier: MIT OR Apache-2.0
-{ pkgs, craneLib }:
+{ pkgs, craneLib, caudioSrc }:
 let
+  # The reusable Rust mechanism lives in corbet-libs/caudio (flake input, FSL).
   # Only files Cargo consumes belong to the package source. In particular, editing prose or a Nix
   # module must not rebuild the Rust application. Keep all of tests rather than using Crane's
   # default Rust-only filter: the integration harness executes its shell fixtures at runtime.
   src = pkgs.lib.fileset.toSource {
-    root = ./.;
+    root = caudioSrc;
     fileset = pkgs.lib.fileset.unions [
-      ./Cargo.lock
-      ./Cargo.toml
-      ./src
-      ./tests
+      (caudioSrc + "/Cargo.lock")
+      (caudioSrc + "/Cargo.toml")
+      (caudioSrc + "/src")
+      (caudioSrc + "/tests")
     ];
   };
 
@@ -50,7 +51,7 @@ craneLib.buildPackage (commonArgs // {
   # backend module is designed to prevent.
   meta = {
     description = "Semantic PipeWire control plane and StatusNotifier frontend";
-    license = pkgs.lib.licenses.mit;
+    license = with pkgs.lib.licenses; [ mit asl20 ];
     platforms = pkgs.lib.platforms.linux;
     mainProgram = "nixaudioctl";
   };

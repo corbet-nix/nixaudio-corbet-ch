@@ -6,13 +6,17 @@
   inputs.crane.url = "github:ipetkov/crane";
   inputs.system-manager.url = "github:numtide/system-manager";
   inputs.system-manager.inputs.nixpkgs.follows = "nixpkgs";
+  # Reusable Rust mechanism lives in corbet-libs/caudio (FSL). This flake
+  # owns the NixOS/system-manager/Home Manager planes that consume it.
+  inputs.caudio.url = "github:corbet-libs/caudio";
+  inputs.caudio.flake = false;
 
   # nixusb is deliberately not a flake input.
   #
   # A host that composes nixusb gets stable USB identity from its shared inventory. Peer membership
   # is always explicit nixaudio data: an audio circle must not silently grow whenever a generic
   # network peer appears, and no overlay product is part of the transport contract.
-  outputs = { self, nixpkgs, crane, system-manager }:
+  outputs = { self, nixpkgs, crane, system-manager, caudio }:
     let
       lib = nixpkgs.lib;
       supportedSystems = [ "x86_64-linux" "aarch64-linux" ];
@@ -21,6 +25,7 @@
       nixaudioPackageFor = pkgs: import ./package.nix {
         inherit pkgs;
         craneLib = crane.mkLib pkgs;
+        caudioSrc = caudio;
       };
       withNixaudioPackage = module: { pkgs, ... }: {
         imports = [ module ];
@@ -86,6 +91,7 @@
         import ./checks {
           inherit pkgs;
           inherit nixpkgs;
+          caudioSrc = caudio;
           nixaudioPackage = nixaudioPackageFor pkgs;
           nixaudioModule = self.nixosModules.nixaudio;
           archModule = self.systemManagerModules.nixaudio;

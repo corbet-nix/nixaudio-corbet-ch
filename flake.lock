@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "caudio": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790013752,
+        "narHash": "sha256-oGUedaju6poFPlY2GXPjjudF4+EiQRgNKmsF7iUBd1E=",
+        "owner": "corbet-libs",
+        "repo": "caudio",
+        "rev": "06f45d04e618d9f546b5dfc55f4b2e322cfa942a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "corbet-libs",
+        "repo": "caudio",
+        "type": "github"
+      }
+    },
     "crane": {
       "locked": {
         "lastModified": 1787326676,
@@ -122,6 +138,7 @@
     },
     "root": {
       "inputs": {
+        "caudio": "caudio",
         "crane": "crane",
         "nixpkgs": "nixpkgs",
         "system-manager": "system-manager"
