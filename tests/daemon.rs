@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT OR Apache-2.0
 //! End-to-end tests for `nixaudiod`: a real process, a real session bus, a real `nixaudioctl`,
 //! against a fake PipeWire and a fake JackTrip.
 //!

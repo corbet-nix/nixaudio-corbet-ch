@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 {
   description = "Audio as one declared fleet-wide fact: stable device names from the shared USB inventory, and a many-to-many cross-host device pool addressed by name rather than by address.";
 

@@ -1,8 +1,9 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 [package]
 name = "nixaudio"
 version = "0.2.0"
 edition = "2021"
-license = "MIT"
+license = "MIT OR Apache-2.0"
 description = "Semantic PipeWire control plane for local and network audio devices"
 
 [dependencies]

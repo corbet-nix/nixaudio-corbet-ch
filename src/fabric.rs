@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT OR Apache-2.0
 use crate::config::{Config, PeerConfig, ResolvedTransport};
 use anyhow::{bail, Context, Result};
 use serde::{Deserialize, Serialize};

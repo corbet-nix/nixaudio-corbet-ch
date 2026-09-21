@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 { pkgs, nixpkgs, nixaudioPackage, nixaudioModule, archModule, homeModule }:
 let
   lib = nixpkgs.lib;

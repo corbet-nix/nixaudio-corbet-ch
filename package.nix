@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 { pkgs, craneLib }:
 let
   # Only files Cargo consumes belong to the package source. In particular, editing prose or a Nix

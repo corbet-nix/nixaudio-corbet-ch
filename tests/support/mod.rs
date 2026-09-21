@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT OR Apache-2.0
 //! A whole `nixaudiod`, running against a world made of shell scripts.
 //!
 //! The daemon reaches the outside world through four commands and three environment variables,

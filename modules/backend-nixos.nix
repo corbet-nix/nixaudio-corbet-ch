@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # The NixOS backend for `nixaudio.want`.
 #
 # NixAudio may own this backend because nixpkgs is already its package universe. The foreign-system

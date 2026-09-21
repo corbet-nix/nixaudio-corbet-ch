@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # NixOS plane: project the generated config through services.pipewire, the idiomatic path here.
 { lib, config, pkgs, ... }:
 let

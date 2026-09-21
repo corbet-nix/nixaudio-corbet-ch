@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # NixOS resolution for the semantic `nixaudio.want` contract. This is the only backend table in
 # NixAudio: nixpkgs is already this repository's package universe. Foreign package names belong to
 # the corresponding host hub (nixarch for Arch/CachyOS).

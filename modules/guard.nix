@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # nixaudio.guard — notice that WirePlumber came up with NO devices, and put it back.
 #
 # ── THE INCIDENT THIS IS FOR ────────────────────────────────────────────────────────────────────

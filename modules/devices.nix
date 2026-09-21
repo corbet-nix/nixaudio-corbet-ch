@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # nixaudio.devices — give every audio device a stable name every participating host agrees on.
 #
 # WHY THIS IS NOT JUST COSMETIC

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 { pkgs }:
 
 # A source-pinned build of the upstream JackTrip CLI/JACK engine. This is packaging, not a fork:

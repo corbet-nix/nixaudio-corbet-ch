@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # nixaudiod is the single runtime owner of the live PipeWire graph. Nix owns its executable,
 # declared device/peer vocabulary and service lifecycle; remembered routes remain user state.
 { lib, config, pkgs, nixaudioPackage, ... }:

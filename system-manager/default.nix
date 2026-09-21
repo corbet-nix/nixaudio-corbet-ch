@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # system-manager plane.
 #
 # system-manager has no `services.pipewire`, so this plane only projects NixAudio's generated host

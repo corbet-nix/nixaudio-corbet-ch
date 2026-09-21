@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # A system and Home Manager evaluation cannot see one another. This declared owner prevents both
 # planes from writing the same WirePlumber naming file on a composed Arch host.
 { lib, ... }:

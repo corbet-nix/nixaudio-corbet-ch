@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: MIT OR Apache-2.0
 set -euo pipefail
 
 # Exercise the real PipeWire -> JackTrip -> UDP -> JackTrip -> PipeWire path on one Linux host.

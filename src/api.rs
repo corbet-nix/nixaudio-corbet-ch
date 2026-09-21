@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT OR Apache-2.0
 #[zbus::proxy(
     interface = "ch.corbet.NixAudio2",
     default_service = "ch.corbet.NixAudio2",

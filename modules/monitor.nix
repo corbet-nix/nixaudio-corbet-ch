@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # One health surface: ask the daemon for the same semantic snapshot the tray renders. This probe is
 # deliberately user-session scoped because both PipeWire and nixaudiod are user-session services.
 { lib, config, pkgs, ... }:

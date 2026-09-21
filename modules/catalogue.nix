@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # The declarative catalogue contains only this host's expected hardware. Remote endpoints are
 # runtime facts published by their owning daemon; guessing a peer's devices during Nix evaluation
 # would make stale, unavailable routes look real.

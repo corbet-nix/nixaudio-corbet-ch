@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # nixaudio.rt — the scheduling privileges PipeWire's realtime module needs.
 #
 # TWO DIFFERENT FAULTS WEAR THE SAME LOG LINE

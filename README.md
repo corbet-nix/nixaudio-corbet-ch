@@ -240,6 +240,10 @@ JackTrip processes separate Linux network namespaces, routes a generated tone th
 channel, records the opposite PipeWire port, and fails on silence. Run it on a disposable build
 host with a logged-in PipeWire session; its required tools are listed and checked by the script.
 
-The nixaudio Rust code is MIT. The pinned JackTrip build remains under its upstream mixed-license
+The nixaudio Rust code is `MIT OR Apache-2.0` (see `LICENSE-MIT` and `LICENSE-APACHE`). The pinned JackTrip build remains under its upstream mixed-license
 terms; its own `--version` output identifies the build as LGPL and points to upstream `LICENSE.md`
 for the MIT/GPL portions.
+
+## Licence
+
+Outbound licence is `MIT OR Apache-2.0`. See `LICENSE-MIT` and `LICENSE-APACHE`; every source file carries `SPDX-License-Identifier: MIT OR Apache-2.0`, and `Cargo.toml` declares `license = "MIT OR Apache-2.0"`.

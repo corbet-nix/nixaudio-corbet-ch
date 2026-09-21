@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # nixaudio.fabric — one semantic PipeWire graph joined across hosts by upstream JackTrip.
 { lib, config, pkgs, ... }:
 let

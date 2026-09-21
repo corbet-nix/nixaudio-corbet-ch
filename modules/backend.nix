@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # nixaudio.backend — the semantic requirements of the local audio graph.
 #
 # This module publishes WHAT an enabled NixAudio host needs through the read-only

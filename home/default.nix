@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT OR Apache-2.0
 # home-manager plane.
 #
 # WHY THIS EXISTS SEPARATELY FROM THE SYSTEM PLANES
